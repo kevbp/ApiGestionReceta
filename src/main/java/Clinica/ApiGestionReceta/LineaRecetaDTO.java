@@ -1,0 +1,70 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Clinica.ApiGestionReceta;
+
+public class LineaRecetaDTO {
+
+    private Long idMto;
+    private String nom;
+    private String des;
+    private double pre;
+    private int can;
+
+    public LineaRecetaDTO() {
+    }
+
+    public LineaRecetaDTO(Long idMto, String nom, String des, double pre, int can) {
+        this.idMto = idMto;
+        this.nom = nom;
+        this.des = des;
+        this.pre = pre;
+        this.can = can;
+    }
+
+    public Long getIdMto() {
+        return idMto;
+    }
+
+    public void setIdMto(Long idMto) {
+        this.idMto = idMto;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public double getPre() {
+        return pre;
+    }
+
+    public void setPre(double pre) {
+        this.pre = pre;
+    }
+
+    public int getCan() {
+        return can;
+    }
+
+    public void setCan(int can) {
+        this.can = can;
+    }
+
+    public double getImporte() {
+        return pre * can;
+    }
+
+}
