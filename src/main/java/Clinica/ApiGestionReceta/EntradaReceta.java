@@ -52,7 +52,5 @@ public class EntradaReceta {
     public void setIdMed(Long idMed) {
         this.idMed = idMed;
     }
-    
-    
 
 }

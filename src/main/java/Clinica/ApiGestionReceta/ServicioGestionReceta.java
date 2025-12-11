@@ -22,7 +22,7 @@ public class ServicioGestionReceta {
     public SalidaReceta grabar(EntradaReceta ent) {
         
         String urlNueRec = "http://ApiNuevaReceta/apiNuevaReceta/salida";
-        SalidaNuevaRecetaDTO salRec = resTem.getForObject(urlNueRec, SalidaNuevaRecetaDTO.class);
+        SalidaNuevaRecetaDTO salNueRec = resTem.getForObject(urlNueRec, SalidaNuevaRecetaDTO.class);
         
         String urlCesRec = "http://ApiCestaReceta/apiCestaReceta/verCesta";
         ResponseEntity<List<LineaRecetaDTO>> resLisLinRec = resTem.exchange(urlCesRec, HttpMethod.GET, null, new ParameterizedTypeReference<List<LineaRecetaDTO>>() {
@@ -32,7 +32,7 @@ public class ServicioGestionReceta {
         String urlTotCesRec = "http://ApiCestaReceta/apiCestaReceta/verTotal";
         double totCesRec = resTem.getForObject(urlTotCesRec, double.class);
         
-        Long idAte = salRec.getAte().getIdAte();
+        Long idAte = salNueRec.getAte().getIdAte();
         String fec = ent.getFec();
         String hor = ent.getHor();
         Long idMed = ent.getIdMed();
